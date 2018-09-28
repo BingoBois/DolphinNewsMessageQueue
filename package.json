@@ -1,0 +1,25 @@
+{
+  "name": "DolphinNewsMessageQueue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "start": "nodemon ./src/express"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BingoBois/DolphinNewsMessageQueue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BingoBois/DolphinNewsMessageQueue/issues"
+  },
+  "homepage": "https://github.com/BingoBois/DolphinNewsMessageQueue#readme",
+  "dependencies": {
+      "amqplib": "0.5.2",
+      "body-parser": "1.18.3",
+      "express": "4.16.3"
+  }
+}
