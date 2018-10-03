@@ -2,7 +2,7 @@ const amqp = require("amqplib/callback_api");
 
 module.exports.sendToRabbit = (message) => {
     return new Promise((resolve, reject) => {
-        amqp.connect('amqp://80.167.223.178', function (err, conn) {
+        amqp.connect('amqp://104.248.29.64', function (err, conn) {
             if (err) {
                 reject(err);
             }

@@ -1,12 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const { sendToRabbit } = require('./rabbitMQ');
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: false}));
-
 const PORT = 8081;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     res.json({
@@ -17,6 +16,7 @@ app.get('/', (req, res) => {
 app.post('/new', (req, res) => {
     console.log(`Received new request`);
     let msg = "Successfully forwarded message to RabbitMQ.";
+    console.log(req.body);
     sendToRabbit(JSON.stringify(req.body)).then(() => {
         res.json({
             message: msg

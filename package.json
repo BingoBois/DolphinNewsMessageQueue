@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start": "nodemon ./src/express"
+      "start": "node ./src/express"
   },
   "repository": {
     "type": "git",
